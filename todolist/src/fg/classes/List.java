@@ -13,6 +13,21 @@ public class List extends JPanel{
 		
 		 this.setLayout(layout);
 		 this.setBackground(Color.decode("#48dbfb"));
+	}
+	
+	public void updatNumbers() {
+		Component[] listItems = this.getComponents();
+		
+		for(int i = 0 ; i < listItems.length ; i++) {
+			if(listItems[i] instanceof Task) {
+				((Task)listItems[i]).changeIndex(i+1);
+			}
+		}
+	}
+
+	public void removeCompletedTasks() {
+		
+		
 		
 	}
 
